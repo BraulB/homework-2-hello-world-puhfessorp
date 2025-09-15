@@ -2,7 +2,7 @@
 
 # Homework - Hello World
 
-This assignment prints Hello World followed by my name
+This assignment prints Hello followed by my name
 
 # My Information
 
