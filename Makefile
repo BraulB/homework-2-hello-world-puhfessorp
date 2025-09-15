@@ -34,7 +34,7 @@ help:
         @echo "make run       ==> Run the program"
         @echo "make debug     ==> Debug the program"
         @echo
-        @echo "make clean      ==> Clean the build"
+        @echo "make clean      ==> Clean the build area"
         @echo
 .PHONY: help
 
@@ -72,9 +72,9 @@ clean:
 
 #
 $(BIN): main.o
-      -ld --fatal-warnings $(LINK_FLAGS) *.o -o $(BIN)
+      ld --fatal-warnings $(LINK_FLAGS) *.o -o $(BIN)
 
 
 #
 main.o: main.asm
-        yasm $(YASM_FLAGS) main.asm     main.o
+        yasm $(YASM_FLAGS) main.asm  - main.o
