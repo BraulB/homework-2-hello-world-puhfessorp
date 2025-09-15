@@ -76,4 +76,5 @@ $(BIN): main.o
 
 
 #
-main.o
+main.o: main.asm
+        yasm $(YASM_FLAGS) main.asm     main.o
