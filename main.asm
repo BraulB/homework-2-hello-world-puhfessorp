@@ -17,6 +17,13 @@ section		.text
 
 
 ;	Entry point to our program
+global _start
+_start:
 
+	; Setup the return value and call the exit syscall
+	mov rax, SYS_EXIT
+	;mov rdi, EXIT_SOMEFAIL
+	mov rdi, EXIT_SUCCESS
+	syscall
 
 
